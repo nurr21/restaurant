@@ -4,18 +4,13 @@ const app = express();
 const PORT = 3000;
 
 // Serve static files
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '/')));
 
-// API endpoint
-app.get('/api/data', (req, res) => {
-    res.json({ message: 'Hello from the server!' });
-}); 
-
-// Home route
+// Route for main view
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'view.html'));
+  res.sendFile(path.join(__dirname, 'view.html'));
 });
 
 app.listen(PORT, () => {
-  console.log(`Server is running at http://localhost:${PORT}`);
+  console.log(`Server is running on http://localhost:${PORT}`);
 });
