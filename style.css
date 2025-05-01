@@ -1,0 +1,132 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+    padding-bottom: 60px;
+    justify-content: center;
+    text-align: center;
+
+}
+
+/* Navbar */
+.navbar {
+    font-weight: bold;
+}
+
+.navbar a.nav-link {
+    color: #333;
+    transition: color 0.3s;
+}
+
+.navbar a.nav-link:hover {
+    color: #fff;
+}
+
+/* Jumbotron Section */
+.row {
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 40px 20px;
+    background-color: gainsboro;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.row h1 {
+    width: 100%;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: #222;
+}
+
+#mainRow img {
+    width: 250px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+#mainRow img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Restaurant Details */
+#Details {
+    margin: 40px 20px 10px;
+    font-weight: bold;
+    font-size: 2rem;
+    color: #111;
+}
+
+p {
+    margin: 10px 20px;
+    text-align: center;
+}
+
+p b {
+    color: #333;
+}
+
+/* Operating Hours */
+p u {
+    font-weight: bold;
+}
+
+/* Back to Top Link */
+a[href="#top"] {
+    display: block;
+    text-align: center;
+    margin-top: 40px;
+    font-weight: bold;
+    text-decoration: underline;
+    color: #007bff;
+}
+
+/* Footer */
+footer.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #ffc107;
+    padding: 10px;
+    color: #333;
+    font-weight: bold;
+}
+
+
+button{
+    font-weight: bolder;
+    background-color: transparent;
+    color: black;
+    transition: all 0.3s;
+    border: 0;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+button:hover{
+    background-color: black;
+    border-radius: 22px;
+    color: yellow;
+}
+
+  .col{
+    flex-direction: column;
+    display: grid;
+    justify-content: center;
+  }
+
+  

@@ -1,0 +1,12 @@
+body{
+    background-color: black;
+    font-weight: 600;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+ol{
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 5px 5px 5px black;
+}
+

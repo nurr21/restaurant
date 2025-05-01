@@ -1,0 +1,108 @@
+#reservationDates {
+    flex-direction: row;
+    display: flexbox;
+    flex-wrap: wrap; /* wrap to next line if there's no space */
+    gap: 5px;
+    justify-content: center;
+    padding: 1rem;
+    width: 100%;
+    
+    margin: auto;
+    font-family: sans-serif;
+}
+
+.reservation-container {
+  position: relative;
+  width: 100rem;
+  max-width: 100%;
+  margin: auto;
+  border-radius: 12px;
+}
+
+#reservationsPic {
+  height: 20rem;
+  width: 100%;
+  filter: blur(2px); /* adjust the blur intensity */
+}
+
+.reservation-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 3rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  z-index: 2;
+}
+
+
+.weekdays {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    max-width: 500px;
+  }
+  
+  .weekdays li {
+    width: 500px;
+    font-weight: bold;
+  }
+  
+  .days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* exactly 7 columns */
+    gap: 8px; /* spacing between buttons */
+    margin-top: 20px;
+  }
+  
+  .day-button {
+    padding: 10px 0;
+    background-color: #eee;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .day-button.active {
+    background-color: #ff9900;
+    color: white;
+  }
+  
+.day-button:hover {
+    background-color: #ffcc00;
+    color: black;
+}
+
+#calendar-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  #numOfGuests{
+    text-align: center;
+    font-size: large;
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px black;
+    width: fit-content;
+    padding: 10px;
+    font-weight: 600;
+  }
+
+  #hour{
+    text-align: center;
+    width: fit-content;
+    height: 5rem;
+    border-radius: 15px;
+    font-size: large;
+    padding: 10px;
+    font-weight: 600;
+  }
