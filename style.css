@@ -129,4 +129,36 @@ button:hover{
     justify-content: center;
   }
 
-  
+
+/* irem's css */
+  ol h2 {
+    background-color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    border-style: solid;
+    /* border-left:1cm; */
+    /*border-right:1cm;*/
+    padding-left: 2%;
+  }
+
+  ul.chosen {
+    text-align: center;
+    border: 1px solid black;
+  }
+  .form-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    background-color: #ffffff;
+  }
+  .form-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .switch-text {
+    text-align: center;
+    font-size: 14px;
+  }

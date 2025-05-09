@@ -9,29 +9,33 @@ const prevMonth = document.getElementById("prevMonth")
 
 submitButton.onclick = async function saveReservation(event) {
     event.preventDefault();
-    await addReservetion(day.value, hour.value, numOfGuests.value);
+    const month = updateCalendar().textContent
+    await addReservetion(day.value, month, hour.value, numOfGuests.value);
     day.selectedIndex = 0;
-    
 };
 
-async function addReservetion(day, hour, numOfGuests) {
+async function addReservetion(day, month, hour, numOfGuests) {
     try {
         const res = await fetch('http://localhost:4001/reservations', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({day, hour, numOfGuests})
+            body: JSON.stringify({day, month, hour, numOfGuests})
         });
 
         const data = await res.json();
-
-        //let reservations = JSON.parse(localStorage.getItem("reservations")) || [];
-        //reservations.push(data);
         localStorage.setItem("reservations", JSON.stringify(data));
-        console.log(data);
         
+        console.log(data);
+        if(data.message === "Missing required fields: day or hour." ){
+            window.alert("Please fill out all your information")
+        }
+        else{
+            window.alert("Your reservations was successfully reserved")
+        }
         return data;
+
     } catch (err) {
         console.error("Fetch error:", err.message);
         window.alert("An error occured")
@@ -53,6 +57,8 @@ function updateCalendar() {
     monthYear.textContent = `${monthNames[currentMonth]}`;
     totalDays = new Date(currentYear, currentMonth + 1, 0).getDate();
     generateDayButton();
+    return monthYear.textContent;
+
 }
 
 nextMonth.onclick = function (event){
@@ -101,6 +107,4 @@ function generateDayButton (){
     daysContainer.appendChild(dayButton);
 }
 }
-
 updateCalendar();
-

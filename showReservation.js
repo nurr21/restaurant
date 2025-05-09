@@ -1,12 +1,13 @@
-const reservedDate = document.getElementById("reservedDate")
-
-
+const reservedDate = document.getElementById("reservedDate");
 
 function getReservations() {
-    const saved = JSON.parse(localStorage.getItem("reservations")); // Note the key should match exactly
+    const saved = JSON.parse(localStorage.getItem("reservations"));
     if (!saved) return;
 
-    console.log(saved);
-    reservedDate.textContent = `Day: ${saved.day}, Hour: ${saved.hour}, Guests: ${saved.numOfGuests}`;
+    reservedDate.innerHTML = `
+        <div class="reservation-detail">📅 <span>Day:</span> ${saved.day}</div>
+        <div class="reservation-detail">⏰ <span>Hour:</span> ${saved.hour}</div>
+        <div class="reservation-detail">👥 <span>Guests:</span> ${saved.numOfGuests}</div>
+    `;
 }
 getReservations();
