@@ -30,7 +30,7 @@ app.post('/reservations', (req, res) => {
     const { day, month, hour, numOfGuests } = req.body;
     console.log("Incoming reservation:", { day, month, hour, numOfGuests });
 
-    if (!day || !hour || !numOfGuests || !month) {
+    if (!day || !hour || !numOfGuests) {
         return res.status(400).json({ message: "Missing required fields: day or hour." });
     }
 

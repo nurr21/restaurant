@@ -5,7 +5,7 @@ function getReservations() {
     if (!saved) return;
 
     reservedDate.innerHTML = `
-        <div class="reservation-detail">📅 <span>Day:</span> ${saved.day}</div>
+        <div class="reservation-detail">📅 <span>Day:</span> ${saved.day} / ${saved.month} </div>
         <div class="reservation-detail">⏰ <span>Hour:</span> ${saved.hour}</div>
         <div class="reservation-detail">👥 <span>Guests:</span> ${saved.numOfGuests}</div>
     `;

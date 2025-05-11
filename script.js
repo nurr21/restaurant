@@ -9,7 +9,8 @@ const prevMonth = document.getElementById("prevMonth")
 
 submitButton.onclick = async function saveReservation(event) {
     event.preventDefault();
-    const month = updateCalendar().textContent
+    const month = updateCalendar()
+    //const monthName
     await addReservetion(day.value, month, hour.value, numOfGuests.value);
     day.selectedIndex = 0;
 };
